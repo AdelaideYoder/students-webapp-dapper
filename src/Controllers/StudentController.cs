@@ -100,6 +100,7 @@ namespace Workforce.Controllers {
             }
         }
 
+        [HttpGet]
         public async Task<IActionResult> Create () {
             using (IDbConnection conn = Connection) {
                 ViewData["CohortId"] = await CohortList(null);
@@ -181,7 +182,7 @@ namespace Workforce.Controllers {
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit (int id, StudentEditViewModel model) {
+        public async Task<IActionResult> Edit ([FromRoute] int id, StudentEditViewModel model) {
             if (id != model.Student.Id) {
                 return NotFound ();
             }
