@@ -31,6 +31,12 @@
                     @Html.DisplayFor(modelItem => instructor.Cohort.Name)
                 </td>
                 <td>
+                    @Html.DisplayFor(modelItem => instructor.SlackHandle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => instructor.Specialty)
+                </td>
+                <td>
                     <a asp-action="Edit" asp-route-id="@instructor.Id">Edit</a> |
                     <a asp-action="Details" asp-route-id="@instructor.Id">Details</a> |
                     <a asp-action="DeleteConfirm" asp-route-id="@instructor.Id">Delete</a>

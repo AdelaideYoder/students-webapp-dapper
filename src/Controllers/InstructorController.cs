@@ -43,6 +43,7 @@ namespace Workforce.Controllers
                 i.LastName,
                 i.SlackHandle,
                 i.Specialty,
+                i.CohortId,
                 c.Id,
                 c.Name
             from Instructor i
