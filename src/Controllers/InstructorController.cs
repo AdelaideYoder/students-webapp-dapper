@@ -42,6 +42,7 @@ namespace Workforce.Controllers
                 i.FirstName,
                 i.LastName,
                 i.SlackHandle,
+                i.Specialty,
                 c.Id,
                 c.Name
             from Instructor i
@@ -80,7 +81,8 @@ namespace Workforce.Controllers
                 i.Id,
                 i.FirstName,
                 i.LastName,
-                i.SlackHandle
+                i.SlackHandle,
+                i.Specialty
             from Instructor i
             WHERE i.Id = {id}";
 
@@ -136,13 +138,14 @@ namespace Workforce.Controllers
             {
                 string sql = $@"
                     INSERT INTO Instructor
-                        ( Id, FirstName, LastName, SlackHandle, CohortId )
+                        ( Id, FirstName, LastName, SlackHandle, Specialty, CohortId )
                         VALUES
                         ( null
                             , '{instructor.FirstName}'
                             , '{instructor.LastName}'
                             , '{instructor.SlackHandle}'
-                            , {instructor.CohortId}
+                            , '{instructor.Specialty}'
+                            , '{instructor.CohortId}'
                         )
                     ";
 
@@ -181,6 +184,7 @@ namespace Workforce.Controllers
                     i.FirstName,
                     i.LastName,
                     i.SlackHandle,
+                    i.Specialty,
                     i.CohortId,
                     c.Id,
                     c.Name
@@ -220,6 +224,7 @@ namespace Workforce.Controllers
                 SET FirstName = '{model.Instructor.FirstName}',
                     LastName = '{model.Instructor.LastName}',
                     SlackHandle = '{model.Instructor.SlackHandle}',
+                    Specialty = '{model.Instructor.Specialty}',
                     CohortId = {model.Instructor.CohortId}
                 WHERE Id = {id}";
 
@@ -251,7 +256,8 @@ namespace Workforce.Controllers
                     i.Id,
                     i.FirstName,
                     i.LastName,
-                    i.SlackHandle
+                    i.SlackHandle,
+                    i.Specialty
                 from Instructor i
                 WHERE i.Id = {id}";
 

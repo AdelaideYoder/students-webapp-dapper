@@ -35,6 +35,6 @@ namespace Workforce.Models
             }
         }
 
-        public string Speciality { get; set; }
+        public string Specialty { get; set; }
     }
 }
