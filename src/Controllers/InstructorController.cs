@@ -258,7 +258,8 @@ namespace Workforce.Controllers
                     i.FirstName,
                     i.LastName,
                     i.SlackHandle,
-                    i.Specialty
+                    i.Specialty,
+                    i.CohortId
                 from Instructor i
                 WHERE i.Id = {id}";
 

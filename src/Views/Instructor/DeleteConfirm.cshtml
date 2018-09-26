@@ -10,62 +10,48 @@
             <div>
                 <hr />
                 <dl class="dl-horizontal">
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.FirstName)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.LastName)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.SlackHandle)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.SlackHandle)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.CohortId)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.CohortId)
+                    </dd>
                     <dt>
                         @Html.DisplayNameFor(model => model.FullName)
                     </dt>
                     <dd>
                         @Html.DisplayFor(model => model.FullName)
                     </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Specialty)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Specialty)
+                    </dd>
                 </dl>
-
-                <form asp-action="Delete">
-                    <input type="hidden" asp-for="Id" />
-                    <input type="submit" value="Delete" class="btn btn-default" /> |
-                    <a asp-action="Index">Back to List</a>
-                </form>
-            </div>
-
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.SlackHandle)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.SlackHandle)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.CohortId)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.CohortId)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.FullName)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.FullName)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Specialty)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Specialty)
-        </dd>
-    </dl>
     
-    <form asp-action="Delete">
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </form>
 </div>
